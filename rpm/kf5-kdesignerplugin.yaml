@@ -50,6 +50,8 @@ PkgConfigBR:
     - Qt5Test
     - Qt5Declarative
     - Qt5WebKit
+    - Qt5WebKitWidgets
+    - Qt5Designer
 Requires:
     - kf5-filesystem
 
