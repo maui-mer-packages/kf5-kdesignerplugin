@@ -1,0 +1,91 @@
+Name         : kf5-kdesignerplugin
+Version      : 4.99.0
+Release      : 1
+Group        : System/Base
+License      : GPLv2+
+Summary      : KDE Frameworks 5 Tier 3 integration module for QtDesigner
+Description  : |
+  KDE Frameworks 5 Tier 3 integration module for QtDesigner
+URL          : http://www.kde.org
+SetupOptions : -q -n %{name}-%{version}/upstream
+
+Sources:
+    - "%{name}-%{version}.tar.xz"
+
+RpmLintIgnore:
+    - devel-file-in-non-devel-package
+    - no-changelogname-tag
+    - library-without-ldconfig-postin
+    - library-without-ldconfig-postun
+
+Configure    : none
+Builder      : none
+
+PkgBR:
+    - kf5-rpm-macros
+    - extra-cmake-modules
+    - qt5-tools
+    - kf5-kcoreaddons-devel
+    - kf5-kconfig-devel
+    - kf5-kdoctools-devel
+    - kf5-kcompletion-devel
+    - kf5-kconfigwidgets-devel
+    - kf5-kiconthemes-devel
+    - kf5-kio-devel
+    - kf5-kitemviews-devel
+    - kf5-kplotting-devel
+    - kf5-ktextwidgets-devel
+    - kf5-kwidgetsaddons-devel
+    - kf5-kxmlgui-devel
+    - kf5-sonnet-devel
+    - kf5-kdewebkit-devel
+PkgConfigBR:
+    - Qt5Core
+    - Qt5DBus
+    - Qt5Xml
+    - Qt5Network
+    - Qt5Gui
+    - Qt5Widgets
+    - Qt5Concurrent
+    - Qt5Test
+    - Qt5Declarative
+    - Qt5WebKit
+Requires:
+    - kf5-filesystem
+
+RequiresPost:
+    - /sbin/ldconfig
+RequiresPostUn:
+    - /sbin/ldconfig
+
+Files:
+    - "%doc COPYING.LIB README.md"
+    - "%{_kf5_bindir}/kgendesignerplugin"
+    - "%{_kf5_mandir}/man1/*"
+    - "%{_kf5_qtplugindir}/designer/*.so"
+    - "%{_kf5_datadir}/kf5/widgets/*"
+
+SubPackages:
+    - Name: devel
+      Group: Development/Libraries
+      Summary: Development files for %{name}
+      Description: |
+        The %{name}-devel package contains the files necessary to develop applications
+        that use %{name}.
+      Requires:
+        - kf5-kcoreaddons-devel
+        - kf5-kconfig-devel
+        - kf5-kdoctools-devel
+        - kf5-kcompletion-devel
+        - kf5-kconfigwidgets-devel
+        - kf5-kiconthemes-devel
+        - kf5-kio-devel
+        - kf5-kitemviews-devel
+        - kf5-kplotting-devel
+        - kf5-ktextwidgets-devel
+        - kf5-kwidgetsaddons-devel
+        - kf5-kxmlgui-devel
+        - kf5-sonnet-devel
+        - kf5-kdewebkit-devel
+      Files:
+          - "%{_kf5_libdir}/cmake/KF5DesignerPlugin"
