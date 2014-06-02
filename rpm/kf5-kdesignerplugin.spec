@@ -47,6 +47,7 @@ BuildRequires:  kf5-kwidgetsaddons-devel
 BuildRequires:  kf5-kxmlgui-devel
 BuildRequires:  kf5-sonnet-devel
 BuildRequires:  kf5-kdewebkit-devel
+BuildRequires:  qt5-qttools-qtdesigner
 
 
 %description

@@ -39,6 +39,7 @@ PkgBR:
     - kf5-kxmlgui-devel
     - kf5-sonnet-devel
     - kf5-kdewebkit-devel
+    - qt5-qttools-qtdesigner
 PkgConfigBR:
     - Qt5Core
     - Qt5DBus
