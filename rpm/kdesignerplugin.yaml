@@ -1,5 +1,5 @@
-Name         : kf5-kdesignerplugin
-Version      : 5.0.0
+Name         : kdesignerplugin
+Version      : 5.1.0
 Release      : 1
 Group        : System/Base
 License      : GPLv2+
@@ -25,20 +25,20 @@ PkgBR:
     - kf5-rpm-macros
     - extra-cmake-modules
     - qt5-tools
-    - kf5-kcoreaddons-devel
-    - kf5-kconfig-devel
-    - kf5-kdoctools-devel
-    - kf5-kcompletion-devel
-    - kf5-kconfigwidgets-devel
-    - kf5-kiconthemes-devel
-    - kf5-kio-devel
-    - kf5-kitemviews-devel
-    - kf5-kplotting-devel
-    - kf5-ktextwidgets-devel
-    - kf5-kwidgetsaddons-devel
-    - kf5-kxmlgui-devel
-    - kf5-sonnet-devel
-    - kf5-kdewebkit-devel
+    - kcoreaddons-devel
+    - kconfig-devel
+    - kdoctools-devel
+    - kcompletion-devel
+    - kconfigwidgets-devel
+    - kiconthemes-devel
+    - kio-devel
+    - kitemviews-devel
+    - kplotting-devel
+    - ktextwidgets-devel
+    - kwidgetsaddons-devel
+    - kxmlgui-devel
+    - sonnet-devel
+    - kdewebkit-devel
     - qt5-qttools-qtdesigner
 PkgConfigBR:
     - Qt5Core
@@ -65,9 +65,9 @@ RequiresPostUn:
 Files:
     - "%doc COPYING.LIB README.md"
     - "%{_kf5_bindir}/kgendesignerplugin"
-    - "%{_kf5_mandir}/man1/*"
-    - "%{_kf5_qtplugindir}/designer/*.so"
-    - "%{_kf5_datadir}/kf5/widgets/*"
+    - "%{_mandir}/man1/*"
+    - "%{_kf5_plugindir}/*"
+    - "%{_kf5_datadir}/widgets/*"
 
 SubPackages:
     - Name: devel
@@ -77,19 +77,19 @@ SubPackages:
         The %{name}-devel package contains the files necessary to develop applications
         that use %{name}.
       Requires:
-        - kf5-kcoreaddons-devel
-        - kf5-kconfig-devel
-        - kf5-kdoctools-devel
-        - kf5-kcompletion-devel
-        - kf5-kconfigwidgets-devel
-        - kf5-kiconthemes-devel
-        - kf5-kio-devel
-        - kf5-kitemviews-devel
-        - kf5-kplotting-devel
-        - kf5-ktextwidgets-devel
-        - kf5-kwidgetsaddons-devel
-        - kf5-kxmlgui-devel
-        - kf5-sonnet-devel
-        - kf5-kdewebkit-devel
+        - kcoreaddons-devel
+        - kconfig-devel
+        - kdoctools-devel
+        - kcompletion-devel
+        - kconfigwidgets-devel
+        - kiconthemes-devel
+        - kio-devel
+        - kitemviews-devel
+        - kplotting-devel
+        - ktextwidgets-devel
+        - kwidgetsaddons-devel
+        - kxmlgui-devel
+        - sonnet-devel
+        - kdewebkit-devel
       Files:
-          - "%{_kf5_libdir}/cmake/KF5DesignerPlugin"
+          - "%{_kf5_cmakedir}/KF5DesignerPlugin"
