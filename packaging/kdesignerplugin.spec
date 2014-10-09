@@ -113,7 +113,6 @@ rm -rf %{buildroot}
 %doc COPYING.LIB README.md
 %{_kf5_bindir}/kgendesignerplugin
 %{_mandir}/man1/*
-%{_kf5_plugindir}/*
 %{_kf5_datadir}/widgets/*
 # >> files
 # << files
