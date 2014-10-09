@@ -114,6 +114,7 @@ rm -rf %{buildroot}
 %{_kf5_bindir}/kgendesignerplugin
 %{_mandir}/man1/*
 %{_kf5_datadir}/widgets/*
+%{_kf5_plugindir}/*
 # >> files
 # << files
 
