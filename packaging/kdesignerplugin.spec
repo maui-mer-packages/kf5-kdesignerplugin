@@ -51,6 +51,7 @@ BuildRequires:  kxmlgui-devel
 BuildRequires:  sonnet-devel
 BuildRequires:  kdewebkit-devel
 BuildRequires:  qt5-qttools-qtdesigner
+BuildRequires:  qt5-qttools-linguist
 
 %description
 KDE Frameworks 5 Tier 3 integration module for QtDesigner

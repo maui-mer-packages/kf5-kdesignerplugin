@@ -39,6 +39,7 @@ PkgBR:
     - sonnet-devel
     - kdewebkit-devel
     - qt5-qttools-qtdesigner
+    - qt5-qttools-linguist
 PkgConfigBR:
     - Qt5Core
     - Qt5DBus
